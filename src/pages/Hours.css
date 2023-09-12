@@ -1,0 +1,129 @@
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+ }
+
+ @media (min-width: 320px) and (max-width: 999px) {
+    .hours{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-bottom: 2rem;
+        overflow-x: hidden; 
+    }
+
+  
+  }
+  
+  @media (min-width: 1000px) {
+  
+    .hours {
+        align-content: center;
+        justify-content: center;
+        max-width: 40rem;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        }
+  
+  }
+
+
+.loadingDiv{
+    width: 100rem;
+    height: 100rem;
+}
+
+  img.homeImage {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 10, 10;
+}
+
+
+.text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header {
+
+
+    display: flex;
+    justify-content: center;
+}
+
+span,p,h4,h2,h3 {
+    animation: fadeIn .3s ease-in; 
+    font-family: 'Linotte';
+}
+
+h1 {
+    font-family: "Linotte";
+}
+
+.red {
+    color: red;
+}
+
+
+
+.r {
+    color: red;
+    padding-right: 1rem;
+    white-space: nowrap;
+}
+.h {
+    display:flex;
+    flex-direction: row;
+}
+.psalm {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.psalmSummaryAndSource {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.psalmSummary {
+
+    font-style: italic;
+    padding-right: .3rem;
+    
+}
+
+.psalmSummaryDiv{
+    text-align: center;
+}
+
+
+.sacredSilence{
+    color: red;
+    padding-right: .3rem;
+    white-space: nowrap;
+}
+
+.readingTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.readingSummary{
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-style: italic;
+}
+.responsoryAndSource {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,175 @@
+/* div {background-color: #E3D7BD;
+} */
+
+
+@media (min-width: 320px) and (max-width: 999px) {
+    .date{
+        font-family: "Old Standard TT";
+        font-size: larger;
+        font-weight: 600;
+        display: flex;
+    }
+}
+
+@media (min-width: 1000px) {
+  
+    .date{
+        font-family: "Old Standard TT";
+        font-size: xx-large;
+        display: flex;
+    }
+  
+  }
+
+#dark{
+    background-color: #282828;
+    color: white;
+}
+
+.root {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+
+
+.root{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAF9F6;
+}
+
+.divLayout{
+    display: contents;
+}
+
+.datePickerAndToggle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
+
+label.themeToggle{
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, .4), inset 0px -5px 15px rgba(255, 255, 255, .4);
+    cursor: pointer;
+}
+
+.invisibleDiv{
+    width: 4rem;
+}
+
+label.themeToggle:after {
+    content: "";
+    width:1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: .11rem;
+    left: .15rem;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  input.themeToggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  input.themeToggle:checked + label {
+    background: #242424;
+  }
+  input.themeToggle:checked + label:after {
+    left:3.9rem;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#928585);
+  }
+  label.themeToggle, label.themeToggle:after {
+    transition: 0.3s
+  }
+
+  label svg{
+    position:absolute;
+    width: 1rem;
+    top: .5rem;
+    z-index: 100;
+  }
+
+  label svg.sun{
+    left: .5rem;
+    fill: #ffffff;
+    transition: .3s;
+  }
+
+  label svg.moon{
+    left:2.6rem;
+    fill: #7e7e7e;
+    transition: .3s;
+  }
+  input:checked + label svg.sun{
+    fill: #7e7e7e;
+  }
+  input:checked + label svg.moon{
+    fill: #fff;
+  }
+
+  .invitatoryToggleAndLabel{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  label.invitatoryToggle{
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+    display: block;
+    background: #242424;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, .4), inset 0px -5px 15px rgba(255, 255, 255, .4);
+    cursor: pointer;
+}
+
+.invisibleDiv{
+    width: 4rem;
+}
+
+label.invitatoryToggle:after {
+    content: "";
+    width:1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: .11rem;
+    left: .15rem;
+    background: linear-gradient(180deg,#b92d2d,#8b1b17);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  input.invitatoryToggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  input.invitatoryToggle:checked + label {
+    background: #242424;
+    background: #ebebeb;
+  }
+  input.invitatoryToggle:checked + label:after {
+    left:3.9rem;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#228b41,#33552f);
+  }
+  label.invitatoryToggle, label.invitatoryToggle:after {
+    transition: 0.3s
+  }
+
