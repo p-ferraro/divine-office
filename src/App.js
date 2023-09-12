@@ -1,5 +1,5 @@
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import {DayContextProvider} from './store/days-context'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Matins, { loader as matinsLoader } from "./pages/Matins";
 import Lauds, { loader as laudsLoader } from "./pages/Lauds";
@@ -31,7 +31,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <DayContextProvider>
       <RouterProvider router={router} />
+      </DayContextProvider>
   );
 }
 

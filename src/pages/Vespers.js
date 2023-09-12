@@ -143,8 +143,8 @@ else{
       <p className="psalm">{feast && feast.Psalm1Numeral ? feast.Psalm1Numeral : vespers.Psalm1Numeral}</p>
       <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Psalm1Text ? feast.Psalm1Text : vespers.Psalm1Text }}></p>
       {gloryBe}
-      <p className="r">{(!feast && vespers.Psalm1Prayer !== "") || (feast && feast.Psalm1Prayer !== "") ? "PSALM-PRAYER" : null}</p>
-      <p>{feast && feast.Psalm1Prayer ? feast.Psalm1Prayer : vespers.Psalm1Prayer}</p>
+      <p className="r">{(!feast && vespers.Psalm1Prayer !== "") || (feast && feast.Psalm1Prayer ) ? "PSALM-PRAYER" : null}</p>
+      <span>{feast && feast.Psalm1Prayer ? feast.Psalm1Prayer : vespers.Psalm1Prayer}</span>
       <div className="h">
         <p className="r">Ant.</p>
         <p>{feast && feast.Antiphon1 ? feast.Antiphon1 : vespers.Antiphon1}</p>
@@ -162,8 +162,8 @@ else{
       </div>
       <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Psalm2Text ? feast.Psalm2Text : vespers.Psalm2Text }}></p>
       {gloryBe}
-      <p className="r">Psalm-prayer</p>
-      <p>{feast && feast.Psalm2Prayer ? feast.Psalm2Prayer : vespers.Psalm2Prayer}</p>
+      <p className="r">{(!feast && vespers.Psalm2Prayer !== "") || (feast && feast.Psalm2Prayer ) ? "PSALM-PRAYER" : null}</p>
+      <span>{feast && feast.Psalm2Prayer ? feast.Psalm2Prayer : vespers.Psalm2Prayer}</span>
       <div className="h">
         <p className="r">Ant.</p>
         <p>{feast && feast.Antiphon2 ? feast.Antiphon2 : vespers.Antiphon2}</p>
@@ -180,8 +180,8 @@ else{
       </div>
       <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Psalm3Text ? feast.Psalm3Text : vespers.Psalm3Text }}></p>
       {gloryBe}
-      <p className="r">{(!feast && vespers.Psalm3Prayer !== "") || (feast && feast.Psalm3Prayer !== "") ? "PSALM-PRAYER" : null}</p>
-      <p>{feast && feast.Psalm3Prayer ? feast.Psalm3Prayer : vespers.Psalm3Prayer}</p>
+      <p className="r">{(!feast && vespers.Psalm3Prayer !== "") || (feast && feast.Psalm3Prayer ) ? "PSALM-PRAYER" : null}</p>
+      <span>{feast && feast.Psalm3Prayer ? feast.Psalm3Prayer : vespers.Psalm3Prayer}</span>
       <div className="h">
         <p className="r">Ant.</p>
         <p>{feast && feast.Antiphon3 ? feast.Antiphon3 : vespers.Antiphon3}</p>

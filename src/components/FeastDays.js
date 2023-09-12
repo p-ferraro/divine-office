@@ -254,7 +254,7 @@ const feastDays = [
     "Twenty-Third Sunday in Ordinary Time",
     "Monday in the Twenty-Third Week in Ordinary Time",
     "Tuesday in the Twenty-Third Week in Ordinary Time",
-    "Wednesday in the Twenty-Third Week in Ordinary Time",
+    "Saint John Chrysostom, Bishop and Doctor",
     "Thursday in the Twenty-Third Week in Ordinary Time",
   ];
 
