@@ -42,6 +42,7 @@ const HomePage = (props) => {
       .then((response) => setInvitatoryAntiphon(response));
     },[props.selectedDate, dayName, weekNumber])
 
+
     useEffect(() => {
       if (week % 4 === 3) {
         setWeekNumber(weeks[0]);

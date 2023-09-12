@@ -2,11 +2,30 @@ import homeImage from "../images/FeastDays/StPeterClaver.png";
 import "./Hours.css";
 import { useOutletContext } from "react-router-dom";
 import ImageCatalog from "../components/ImageCatalog";
+import { useEffect, useState } from "react";
 
 const Home = () => {
 
     const {setShowInvToggle} = useOutletContext();
     const {selectedDate} = useOutletContext()
+    const {monthNames} = useOutletContext();
+    const {isFeastDay} = useOutletContext();
+
+    const [memorialText, setMemorialtext] = useState("");
+
+
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    const [dayName, setDayName] = useState(daysOfWeek[selectedDate.getDay()]);
+
     setShowInvToggle(false)
 
     const dayOfYear = (date) =>
@@ -14,18 +33,32 @@ const Home = () => {
       (date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
     );
 
+
+    let monthName = monthNames[selectedDate.getMonth()]
+console.log(isFeastDay)
+    useEffect(() => {
+      if (isFeastDay === true){
+      fetch(
+        `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/FeastDays/${monthName + selectedDate.getDate()}/Memorial.json`
+      )
+        .then((response) => response.json())
+        .then((response) => setMemorialtext(response));
+      }},[selectedDate, dayName, isFeastDay])
+
   return (
     <>
   <div className="hours">
     <img
       className="homeImage"
-      src={ImageCatalog[dayOfYear(selectedDate) - 249].actualImage}
+      src={ImageCatalog[dayOfYear(selectedDate) - 248].actualImage}
       width="400"
       height="400"
       alt="Nativity of Blessed Virgin"
     />
   </div>
-  <div className="hours" ><h3 style={{color:"red"}}>What is the Divine Office?</h3>
+  <div className="hours" >
+  <p style={{textAlign:"center"}}>{memorialText}</p>
+    <h3 style={{color:"red"}}>What is the Divine Office?</h3>
     <p>
       The Divine Office, also known as the Liturgy of the Hours, is a daily
       pilgrimage of prayer that invites you to sanctify each day through

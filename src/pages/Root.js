@@ -218,7 +218,7 @@ function RootLayout() {
             {showInvToggle && <label className="invitatoryToggle" for="invitatory-toggle"></label>}
           </div>
           {showInvitatory ? (
-            <HomePage gloryBe={gloryBe} selectedDate={selectedDate}/>
+            <HomePage gloryBe={gloryBe} selectedDate={selectedDate} />
           ) : null}
           <br/>
           <br/>
