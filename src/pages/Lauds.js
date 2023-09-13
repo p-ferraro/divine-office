@@ -143,7 +143,7 @@ console.log(weekNumber)
       <p className="r">PSALMODY</p>
       <div className="h">
         <p className="r">Ant. 1</p>
-        <p>{lauds.Antiphon1}</p>
+        <p>{feast && feast.Antiphon1 ? feast.Antiphon1 : lauds.Antiphon1}</p>
       </div>
       <span className="psalm">{feast && feast.Psalm1Number ? feast.Psalm1Number : lauds.Psalm1Number}</span>
       <span className="psalm">{feast && feast.Psalm1Title ? feast.Psalm1Title : lauds.Psalm1Title}</span>
@@ -187,7 +187,7 @@ console.log(weekNumber)
       </div>
       <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Psalm3Text ? feast.Psalm3Text : lauds.Psalm3Text }}></p>
       {gloryBe}
-      <p className="r">Psalm-prayer</p>
+      <p className="r">{(!feast && lauds.Psalm3Prayer !== "") || (feast && feast.Psalm3Prayer) ? "PSALM-PRAYER" : null}</p>
       <p>{feast && feast.Psalm3Prayer ? feast.Psalm3Prayer : lauds.Psalm3Prayer}</p>
       <div className="h">
         <p className="r">Ant.</p>

@@ -93,7 +93,8 @@ function RootLayout() {
   useEffect(() => {
     if (
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Saint") ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("The")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("The") ||
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph")
     ) {
       setIsFeastDay(true);
     } else {
@@ -152,7 +153,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2023-09-5")}
-                maxDate={dayjs("2023-09-13")}
+                maxDate={dayjs("2023-09-14")}
               />
               <input
                 className="themeToggle"

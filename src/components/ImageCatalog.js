@@ -36,6 +36,10 @@ const ImageCatalog = [
     id: "9",
     actualImage: require("../images/FeastDays/SaintJohnChrysostom.png"),
   },
+  {
+    id: "10",
+    actualImage: require("../images/FeastDays/TriumphOfCross.png"),
+  },
 ];
 
 export default ImageCatalog;

@@ -169,7 +169,6 @@ const Matins = () => {
       <p dangerouslySetInnerHTML={{ __html: feast && feast.SacredSilence ? feast.SacredSilence : matins.SacredSilence }}></p>
       <p className="r">FIRST READING</p>
       <span className="header">{feast && feast.Reading1Title ? feast.Reading1Title : proper.Reading1Title}</span>
-      <span> </span>
       <span className="psalm">{feast && feast.Reading1Source ? feast.Reading1Source : proper.Reading1Source}</span>
       <span className="readingSummary">{feast && feast.Reading1Summary ? feast.Reading1Summary : proper.Reading1Summary}</span>
       <p dangerouslySetInnerHTML={{ __html: feast && feast.Reading1Text ? feast.Reading1Text : proper.Reading1Text}}></p>
@@ -195,7 +194,7 @@ const Matins = () => {
       <p className="sacredSilence">
         {dayName === "Sunday" ? teDeum : noTeDeum}
       </p>
-      <p dangerouslySetInnerHTML={{ __html: dayName === "Sunday" ? teDeumText : null }}></p>
+      <span dangerouslySetInnerHTML={{ __html: dayName === "Sunday" ? teDeumText : null }}></span>
       <p className="sacredSilence">CONCLUDING PRAYER</p>
       <span dangerouslySetInnerHTML={{ __html: feast && feast.Prayer ? feast.Prayer : proper.Prayer }}></span>
       <br/>

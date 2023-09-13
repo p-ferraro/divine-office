@@ -1,4 +1,4 @@
-import homeImage from "../images/FeastDays/StPeterClaver.png";
+
 import "./Hours.css";
 import { useOutletContext } from "react-router-dom";
 import ImageCatalog from "../components/ImageCatalog";

@@ -97,15 +97,15 @@ const Terce = () => {
       </div>
       <p className="text" dangerouslySetInnerHTML={{ __html: terce.Psalm1Text }}></p>
       {gloryBe}
-      <p className="r">{terce.Psalm1Prayer !== "" ? "PSALM-PRAYER" : null}</p>
+      <p className="r">{terce.Psalm1Prayer ? "PSALM-PRAYER" : null}</p>
       <p>{terce.Psalm1Prayer}</p>
       <div className="h">
         <p className="r">Ant.</p>
-        <p>{terce.Antiphon1}</p>
+        <p>{feast && feast.Antiphon1 ? feast.Antiphon1 : terce.Antiphon1}</p>
       </div>
       <div className="h">
         <p className="r">Ant. 2</p>
-        <p>{terce.Antiphon2}</p>
+        <p>{feast && feast.Antiphon2 ? feast.Antiphon2 : terce.Antiphon2}</p>
       </div>
       <span className="psalm">{terce.Psalm2Number}</span>
       <span className="psalm">{terce.Psalm2Title}</span>
@@ -119,7 +119,7 @@ const Terce = () => {
       <p>{terce.Psalm2Prayer}</p>
       <div className="h">
         <p className="r">Ant.</p>
-        <p>{terce.Antiphon2}</p>
+        <p>{feast && feast.Antiphon2 ? feast.Antiphon2 : terce.Antiphon2}</p>
       </div>
       <div className="h">
         <p className="r">Ant. 3</p>
@@ -137,7 +137,7 @@ const Terce = () => {
       <p>{terce.Psalm3Prayer}</p>
       <div className="h">
         <p className="r">Ant.</p>
-        <p>{terce.Antiphon3}</p>
+        <p>{feast && feast.Antiphon3 ? feast.Antiphon3 : terce.Antiphon3}</p>
       </div>
       <div>
       <span className="r">READING</span>
@@ -155,7 +155,7 @@ const Terce = () => {
           the Church.
         </span>
 
-      <p dangerouslySetInnerHTML={{ __html: terce.SacredSilence }}></p>
+      <p dangerouslySetInnerHTML={{ __html: feast && feast.SacredSilence ? feast.SacredSilence : terce.SacredSilence }}></p>
       <p className="sacredSilence">CONCLUDING PRAYER</p>
       <p dangerouslySetInnerHTML={{ __html: feast && feast.Prayer ? feast.Prayer : terce.Prayer }}></p>
     </div>

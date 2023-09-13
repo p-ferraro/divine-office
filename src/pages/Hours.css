@@ -59,7 +59,7 @@
 }
 
 span,p,h4,h2,h3 {
-    animation: fadeIn .3s ease-in; 
+    animation: fadeIn .5s ease-in; 
     font-family: 'Linotte';
 }
 

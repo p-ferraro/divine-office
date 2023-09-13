@@ -126,7 +126,7 @@ else{
       <h1 className="header">Vespers</h1>
       {GodCome}
       <h4 className="sacredSilence">Hymn</h4>
-      <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Hymn ? feast.Hymn : vespers.Hymn }}></p>
+      <p className="text" dangerouslySetInnerHTML={{ __html: isFeastDay && feast.Hymn ? feast.Hymn : vespers.Hymn }}></p>
 
       <p className="r">PSALMODY</p>
       <div className="h">
@@ -140,7 +140,7 @@ else{
         <span className="psalmSummary">{feast && feast.Psalm1Summary ? feast.Psalm1Summary : vespers.Psalm1Summary}</span>
         <span>{feast && feast.Psalm1SummarySource ? feast.Psalm1SummarySource : vespers.Psalm1SummarySource}</span>
       </div>
-      <p className="psalm">{feast && feast.Psalm1Numeral ? feast.Psalm1Numeral : vespers.Psalm1Numeral}</p>
+      <p className="psalm">{isFeastDay && feast.Psalm1Numeral ? feast.Psalm1Numeral : vespers.Psalm1Numeral}</p>
       <p className="text" dangerouslySetInnerHTML={{ __html: feast && feast.Psalm1Text ? feast.Psalm1Text : vespers.Psalm1Text }}></p>
       {gloryBe}
       <p className="r">{(!feast && vespers.Psalm1Prayer !== "") || (feast && feast.Psalm1Prayer ) ? "PSALM-PRAYER" : null}</p>
