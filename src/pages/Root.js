@@ -94,7 +94,7 @@ function RootLayout() {
     if (
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Saint") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("The") ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") || feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")
     ) {
       setIsFeastDay(true);
     } else {
@@ -153,7 +153,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2023-09-5")}
-                maxDate={dayjs("2023-09-14")}
+                maxDate={dayjs("2023-09-16")}
               />
               <input
                 className="themeToggle"
@@ -219,7 +219,7 @@ function RootLayout() {
             {showInvToggle && <label className="invitatoryToggle" for="invitatory-toggle"></label>}
           </div>
           {showInvitatory ? (
-            <HomePage gloryBe={gloryBe} selectedDate={selectedDate} />
+            <HomePage gloryBe={gloryBe} selectedDate={selectedDate} isFeastDay={isFeastDay} monthNames={monthNames}/>
           ) : null}
           <br/>
           <br/>

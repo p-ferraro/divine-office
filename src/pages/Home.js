@@ -50,7 +50,7 @@ console.log(isFeastDay)
   <div className="hours">
     <img
       className="homeImage"
-      src={ImageCatalog[dayOfYear(selectedDate) - 248].actualImage}
+      src={ImageCatalog[dayOfYear(selectedDate) - 249].actualImage}
       width="400"
       height="400"
       alt="Nativity of Blessed Virgin"

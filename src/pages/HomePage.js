@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useStateWithCallbackLazy } from 'use-state-with-callback';
 import "./Hours.css";
 
 const HomePage = (props) => {
@@ -25,6 +26,9 @@ const HomePage = (props) => {
     "Saturday",
   ]; 
 
+  let monthName = props.monthNames[props.selectedDate.getMonth()]
+
+  const [feast, setFeast] = useStateWithCallbackLazy("");
   const [dayName, setDayName] = useState(daysOfWeek[props.selectedDate.getDay()]);
 
   useEffect(() => {
@@ -40,7 +44,18 @@ const HomePage = (props) => {
     )
       .then((response) => response.json())
       .then((response) => setInvitatoryAntiphon(response));
-    },[props.selectedDate, dayName, weekNumber])
+
+      if(props.isFeastDay === true){
+        fetch(
+          `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/FeastDays/${monthName + props.selectedDate.getDate()}/Invitatory.json`
+        )
+          .then((response) => response.json())
+          .then((response) => setFeast(response));
+      }
+
+    },[props.selectedDate, dayName, weekNumber]
+  
+    )
 
 
     useEffect(() => {
@@ -55,6 +70,8 @@ const HomePage = (props) => {
       }
     }, [props.selectedDate, dayName]);
 
+
+console.log(feast)
   return (
     <div className="hours">
 
@@ -68,32 +85,32 @@ const HomePage = (props) => {
             <br/>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{ feast ? feast : invitatoryAntiphon }</span>
             </div>
             <p dangerouslySetInnerHTML={{ __html: "Come, let us sing to the Lord<br/>and shout with joy to the Rock who saves us.<br/>Let us approach him with praise and thanksgiving<br/>and sing joyful songs to the Lord." }}></p>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <p dangerouslySetInnerHTML={{ __html:"The Lord is God, the mighty God,<br/>the great king over all the gods.<br/>He holds in his hands the depths of the earth<br/>and the highest mountains as well<br/>He made the sea; it belongs to him,<br/>the dry land, too, for it was formed by his hands."}}></p>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <p dangerouslySetInnerHTML={{ __html:"Come, then, let us bow down and worship,<br/>bending the knee before the Lord, our maker,<br/>For he is our God and we are his people,<br/>the flock he shepherds."}}></p>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <p dangerouslySetInnerHTML={{ __html:"Today, listen to the voice of the Lord:<br/>Do not grow stubborn, as your fathers did in the wilderness,<br/>when at Meriba and Massah they challenged me and provoked me,<br/>Although they had seen all of my works."}}></p>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <p dangerouslySetInnerHTML={{ __html:"Forty years I endured that generation.<br/>I said, “They are a people whose hearts go astray<br/>and they do not know my ways.”<br/>So I swore in my anger,<br/>“They shall not enter into my rest.”"}}></p>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <br/>
             {props.gloryBe}
@@ -101,7 +118,7 @@ const HomePage = (props) => {
             <br/>
             <div className="h">
               <span className="r">Ant. </span>
-              <span>{invitatoryAntiphon}</span>
+              <span>{feast ? feast : invitatoryAntiphon}</span>
             </div>
             <br/>
       </div>
