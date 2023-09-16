@@ -257,7 +257,8 @@ const feastDays = [
     "Saint John Chrysostom, Bishop and Doctor",
     "Triumph of the Cross",
     "Our Lady of Sorrows",
-    "Saint Cornelius, Pope & Martyr, Saint Cyprian, Bishop & Martyr"
+    "Saint Cornelius, Pope & Martyr, Saint Cyprian, Bishop & Martyr",
+    "Twenty-Fourth Sunday in Ordinary Time"
   ];
 
   export default feastDays;
