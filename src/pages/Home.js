@@ -1,7 +1,7 @@
 
 import "./Hours.css";
 import { useOutletContext } from "react-router-dom";
-import ImageCatalog from "../components/ImageCatalog";
+// import ImageCatalog from "../components/ImageCatalog";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -28,11 +28,6 @@ const Home = () => {
 
     setShowInvToggle(false)
 
-    const dayOfYear = (date) =>
-    Math.floor(
-      (date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
-    );
-
 
     let monthName = monthNames[selectedDate.getMonth()]
 console.log(isFeastDay)
@@ -48,13 +43,13 @@ console.log(isFeastDay)
   return (
     <>
   <div className="hours">
-    <img
+{/*     <img
       className="homeImage"
       src={ImageCatalog[dayOfYear(selectedDate) - 248].actualImage}
       width="400"
       height="400"
       alt="Nativity of Blessed Virgin"
-    />
+    /> */}
   </div>
   <div className="hours" >
   <p style={{textAlign:"center"}}>{memorialText}</p>
@@ -73,33 +68,33 @@ console.log(isFeastDay)
     </p>
     <ol>
       <li>
-        Morning Prayer (Lauds): Commence your day by offering praise and
+        Morning Prayer (<b>Lauds</b>) - Commence your day by offering praise and
         gratitude to God through psalms, hymns, and scripture readings. It's a
         spiritual sunrise, illuminating your path with God's grace.
       </li>
 
       <li>
-        Midmorning Prayer (Terce): Pause and connect with God amidst your daily
+        Midmorning Prayer (<b>Terce</b>) - Pause and connect with God amidst your daily
         duties with this brief yet meaningful prayer of reflection and praise.
       </li>
 
       <li>
-        Midday Prayer (Sext): Seek God's presence and guidance as you navigate
+        Midday Prayer (<b>Sext</b>) - Seek God's presence and guidance as you navigate
         the activities of the day.
       </li>
 
       <li>
-        Afternoon Prayer (None): Find solace and renewal in the afternoon,
+        Afternoon Prayer (<b>None</b>) - Find solace and renewal in the afternoon,
         grounding yourself in prayer and scripture.
       </li>
 
       <li>
-        Evening Prayer (Vespers): As the day gently concludes, gather to offer
+        Evening Prayer (<b>Vespers</b>) - As the day gently concludes, gather to offer
         thanksgiving and contemplation before the approaching night.
       </li>
 
       <li>
-        Night Prayer (Compline): Entrust yourself to God's loving care and
+        Night Prayer (<b>Compine</b>) - Entrust yourself to God's loving care and
         protection before you rest, with this peaceful and reassuring prayer.
       </li>
     </ol>

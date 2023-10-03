@@ -40,6 +40,17 @@
     background-color: #FAF9F6;
 }
 
+hr{
+  border-color: rgb(205, 203, 203);
+  width: 25rem;
+  height: .5px;
+  box-shadow: none;
+  border-width: .5px;
+  
+
+
+}
+
 .divLayout{
     display: contents;
 }

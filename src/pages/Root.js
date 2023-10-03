@@ -94,14 +94,14 @@ function RootLayout() {
     if (
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Saint") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("The") ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") || feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") ||
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")
     ) {
       setIsFeastDay(true);
     } else {
       setIsFeastDay(false);
     }
   }, [selectedDate]);
-
 
   const [theme, setTheme] = useState("dark");
   const toggleTheme = () => {
@@ -117,7 +117,9 @@ function RootLayout() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className="root" id={theme}>
           <MainNavigation />
+            <hr/>
           <div className="divLayout">
+            <br/>
             <span className="date">
               {feastDays[dayOfYear(selectedDate) - 1]}
               <br />
@@ -130,6 +132,7 @@ function RootLayout() {
                 onChange={(newValue) => {
                   setSelectedDate(new Date(newValue));
                 }}
+                
                 sx={{
                   "& .MuiFormLabel-root": {
                     color: theme === "light" ? "#121212" : "#FAF9F6",
@@ -153,7 +156,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2023-09-5")}
-                maxDate={dayjs("2023-09-17")}
+                maxDate={dayjs("2023-10-3")}
               />
               <input
                 className="themeToggle"
@@ -207,22 +210,34 @@ function RootLayout() {
               </label>
             </div>
           </div>
-          <br/>
+          <br />
           <div className="invitatoryToggleAndLabel">
             {showInvToggle && <span>Invitatory</span>}
-            {showInvToggle && <input
-              className="invitatoryToggle"
-              type="checkbox"
-              id="invitatory-toggle"
-              onClick={toggleInvitatory}
-            />}
-            {showInvToggle && <label className="invitatoryToggle" for="invitatory-toggle"></label>}
+            {showInvToggle && (
+              <input
+                className="invitatoryToggle"
+                type="checkbox"
+                id="invitatory-toggle"
+                onClick={toggleInvitatory}
+              />
+            )}
+            {showInvToggle && (
+              <label
+                className="invitatoryToggle"
+                for="invitatory-toggle"
+              ></label>
+            )}
           </div>
           {showInvitatory ? (
-            <HomePage gloryBe={gloryBe} selectedDate={selectedDate} isFeastDay={isFeastDay} monthNames={monthNames}/>
+            <HomePage
+              gloryBe={gloryBe}
+              selectedDate={selectedDate}
+              isFeastDay={isFeastDay}
+              monthNames={monthNames}
+            />
           ) : null}
-          <br/>
-          <br/>
+          <br />
+          <br />
           <Outlet
             context={{
               selectedDate,
@@ -232,7 +247,7 @@ function RootLayout() {
               gloryBe,
               GodCome,
               isFeastDay,
-              setShowInvToggle
+              setShowInvToggle,
             }}
           />
         </div>

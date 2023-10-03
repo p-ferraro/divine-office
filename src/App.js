@@ -1,13 +1,13 @@
 import "./App.css";
 import {DayContextProvider} from './store/days-context'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Matins, { loader as matinsLoader } from "./pages/Matins";
-import Lauds, { loader as laudsLoader } from "./pages/Lauds";
-import Terce, { loader as terceLoader } from "./pages/Terce";
-import Sext, { loader as sextLoader } from "./pages/Sext";
-import None, { loader as noneLoader } from "./pages/None";
-import Vespers, { loader as vespersLoader } from "./pages/Vespers";
-import Compline, { loader as complineLoader } from "./pages/Compline";
+import Matins from "./pages/Matins";
+import Lauds from "./pages/Lauds";
+import Terce from "./pages/Terce";
+import Sext from "./pages/Sext";
+import None from "./pages/None";
+import Vespers from "./pages/Vespers";
+import Compline from "./pages/Compline";
 import Home from "./pages/Home";
 import RootLayout from "./pages/Root";
 import "./fonts/Linotte.woff"

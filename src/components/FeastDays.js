@@ -258,7 +258,27 @@ const feastDays = [
     "Triumph of the Cross",
     "Our Lady of Sorrows",
     "Saint Cornelius, Pope & Martyr, Saint Cyprian, Bishop & Martyr",
-    "Twenty-Fourth Sunday in Ordinary Time"
+    "Twenty-Fourth Sunday in Ordinary Time",
+    "Twenty-Fourth Monday in Ordinary Time",
+    "Twenty-Fourth Tuesday in Ordinary Time",
+    "Twenty-Fourth Wednesday in Ordinary Time",
+    "Twenty-Fourth Thursday in Ordinary Time",
+    "Twenty-Fourth Friday in Ordinary Time",
+    "Twenty-Fourth Saturday in Ordinary Time",
+    "Twenty-Fifth Sunday in Ordinary Time",
+    "Twenty-Fifth Monday in Ordinary Time",
+    "Twenty-Fifth Tuesday in Ordinary Time",
+    "Twenty-Fifth Wednesday in Ordinary Time",
+    "Twenty-Fifth Thursday in Ordinary Time",
+    "Twenty-Fifth Friday in Ordinary Time",
+    "Twenty-Fifth Saturday in Ordinary Time",
+    "Twenty-Sixth Sunday in Ordinary Time",
+    "Twenty-Sixth Monday in Ordinary Time",
+    "Twenty-Sixth Tuesday in Ordinary Time",
+    "Twenty-Sixth Wednesday in Ordinary Time",
+    "Twenty-Sixth Thursday in Ordinary Time",
+    "Twenty-Sixth Friday in Ordinary Time",
+    "Twenty-Sixth Saturday in Ordinary Time",
   ];
 
   export default feastDays;
