@@ -42,15 +42,6 @@ console.log(isFeastDay)
 
   return (
     <>
-  <div className="hours">
-{/*     <img
-      className="homeImage"
-      src={ImageCatalog[dayOfYear(selectedDate) - 248].actualImage}
-      width="400"
-      height="400"
-      alt="Nativity of Blessed Virgin"
-    /> */}
-  </div>
   <div className="hours" >
   <p style={{textAlign:"center"}}>{memorialText}</p>
     <h3 style={{color:"red"}}>What is the Divine Office?</h3>
