@@ -44,6 +44,20 @@ function RootLayout() {
     "ThursdayTwentyFourthWeek",
     "FridayTwentyFourthWeek",
     "SaturdayTwentyFourthWeek",
+    "SundayTwentyFifthWeek",
+    "MondayTwentyFifthWeek",
+    "TuesdayTwentyFifthWeek",
+    "WednesdayTwentyFifthWeek",
+    "ThursdayTwentyFifthWeek",
+    "FridayTwentyFifthWeek",
+    "SaturdayTwentyFifthWeek",
+    "SundayTwentySixthWeek",
+    "MondayTwentySixthWeek",
+    "TuesdayTwentySixthWeek",
+    "WednesdayTwentySixthWeek",
+    "ThursdayTwentySixthWeek",
+    "FridayTwentySixthWeek",
+    "SaturdayTwentySixthWeek",
   ];
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -155,8 +169,8 @@ function RootLayout() {
                     },
                   },
                 }}
-                minDate={dayjs("2023-09-5")}
-                maxDate={dayjs("2023-10-3")}
+                minDate={dayjs("2023-10-5")}
+                maxDate={dayjs("2023-10-6")}
               />
               <input
                 className="themeToggle"

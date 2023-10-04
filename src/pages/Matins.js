@@ -48,9 +48,6 @@ const Matins = () => {
     setDayName(daysOfWeek[selectedDate.getDay()]);
   }, [selectedDate]);
 
-  console.log(selectedDate.getWeek())
-  console.log(weekNumber)
-
   useEffect(() => {
     if (week % 4 === 3) {
       setWeekNumber(weeks[0]);
