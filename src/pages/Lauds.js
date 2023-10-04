@@ -126,9 +126,6 @@ else{
 }
 },[isFeastDay, selectedDate, feast, lauds, proper])
 
-console.log(selectedDate.getWeek())
-console.log(weekNumber)
-
 
   while(isFetchedFeast === false && isFetchedLauds === false && isFetchedProper === false){
     return <div className="loadingDiv"></div>

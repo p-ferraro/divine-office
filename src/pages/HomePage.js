@@ -71,7 +71,6 @@ const HomePage = (props) => {
     }, [props.selectedDate, dayName]);
 
 
-console.log(feast)
   return (
     <div className="hours">
 

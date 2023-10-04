@@ -24,11 +24,11 @@ export const DayContextProvider = (props) => {
   };
 
   let today = new Date();
-  console.log(today);
+
 
   //let newDay = today.setDate(todaysDate + 1)
 
-  console.log(today);
+
 
   const [x, setx] = useState(today);
 
@@ -110,7 +110,6 @@ export const DayContextProvider = (props) => {
     } else {
       setDayCounter(6);
     }
-    console.log(x);
     setx(x - 1);
   };
 

@@ -85,8 +85,6 @@ const Vespers = () => {
   const [feast, setFeast] = useState({});
   const [designatedAntiphon, setDesignatedAntiphon] = useStateWithCallbackLazy("")
   const [designatedPrayer, setDesignatedPrayer] = useStateWithCallbackLazy("")
-  console.log(proper)
-
 
   useEffect(() => {if (feast && feast.hasOwnProperty('CanticleAntiphon')){
     setDesignatedAntiphon(feast.CanticleAntiphon)
@@ -124,8 +122,6 @@ else{
     return <div>Loading</div>
   }
 
-  console.log(vespers.Hymn)
-  console.log(isFeastDay)
   return (
     
     <div className="hours">

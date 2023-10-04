@@ -30,7 +30,6 @@ const Home = () => {
 
 
     let monthName = monthNames[selectedDate.getMonth()]
-console.log(isFeastDay)
     useEffect(() => {
       if (isFeastDay === true){
       fetch(
