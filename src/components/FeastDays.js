@@ -278,7 +278,14 @@ const feastDays = [
     "Wednesday in the Twenty-Sixth Week in Ordinary Time",
     "Thursday in the Twenty-Sixth Week in Ordinary Time",
     "Friday in the Twenty-Sixth Week in Ordinary Time",
-    "Saturday in the Twenty-Sixth Week in Ordinary Time",
+    "Our Lady of the Rosary",
+    "Sunday in the Twenty-Seventh Week in Ordinary Time",
+    "Monday in the Twenty-Seventh Week in Ordinary Time",
+    "Tuesday in the Twenty-Seventh Week in Ordinary Time",
+    "Wednesday in the Twenty-Seventh Week in Ordinary Time",
+    "Thursday in the Twenty-Seventh Week in Ordinary Time",
+    "Friday in the Twenty-Seventh Week in Ordinary Time",
+    "Saturday in the Twenty-Seventh Week in Ordinary Time"
   ];
 
   export default feastDays;
