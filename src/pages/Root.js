@@ -177,7 +177,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2023-10-10")}
-                maxDate={dayjs("2023-10-12")}
+                maxDate={dayjs("2023-10-13")}
               />
               <input
                 className="themeToggle"
