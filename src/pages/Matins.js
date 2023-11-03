@@ -89,7 +89,7 @@ const Matins = () => {
     return <div>Loading</div>
   }
 
-
+console.log(isFeastDay)
 
   return (
 

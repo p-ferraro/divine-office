@@ -65,6 +65,27 @@ function RootLayout() {
     "ThursdayTwentySeventhWeek",
     "FridayTwentySeventhWeek",
     "SaturdayTwentySeventhWeek",
+    "SundayTwentyEighthWeek",
+    "MondayTwentyEighthWeek",
+    "TuesdayTwentyEighthWeek",
+    "WednesdayTwentyEighthWeek",
+    "ThursdayTwentyEighthWeek",
+    "FridayTwentyEighthWeek",
+    "SaturdayTwentyEighthWeek",
+    "SundayTwentyNinthWeek",
+    "MondayTwentyNinthWeek",
+    "TuesdayTwentyNinthWeek",
+    "WednesdayTwentyNinthWeek",
+    "ThursdayTwentyNinthWeek",
+    "FridayTwentyNinthWeek",
+    "SaturdayTwentyNinthWeek",
+    "SundayThirtiethWeek",
+    "MondayThirtiethWeek",
+    "TuesdayThirtiethWeek",
+    "WednesdayThirtiethWeek",
+    "ThursdayThirtiethWeek",
+    "FridayThirtiethWeek",
+    "SaturdayThirtiethWeek",
   ];
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -116,7 +137,8 @@ function RootLayout() {
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Saint") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("The") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")  ||
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("All")
     ) {
       setIsFeastDay(true);
     } else {
@@ -177,7 +199,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2023-10-10")}
-                maxDate={dayjs("2023-10-13")}
+                maxDate={dayjs("2023-11-04")}
               />
               <input
                 className="themeToggle"
