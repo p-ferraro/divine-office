@@ -48,7 +48,7 @@ const Compline = () => {
       .then((response) => setCompline(response));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/Propers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/Compline.json`
     )
       .then((response) => response.json())

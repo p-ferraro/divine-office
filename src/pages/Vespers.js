@@ -56,7 +56,7 @@ const Vespers = () => {
       .then((response) => setVespers(response));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/DaysOfWeekPropers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/Vespers.json`
     )
       .then((response) => response.json())

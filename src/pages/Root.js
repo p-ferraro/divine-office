@@ -16,6 +16,19 @@ import HomePage from "./HomePage";
 
 function RootLayout() {
   const propers = [
+    "",
+    "TuesdaySeventhWeek",
+    "WednesdaySeventhWeek",
+    "ThursdaySeventhWeek",
+    "FridaySeventhWeek",
+    "SaturdaySeventhWeek",
+    "SundayEighthWeek",
+    "MondayEighthWeek",
+    "TuesdayEighthWeek",
+    "WednesdayEighthWeek",
+    "ThursdayEighthWeek",
+    "FridayEighthWeek",
+    "SaturdayEighthWeek",
     "SundayTwentyFirstWeek",
     "MondayTwentyFirstWeek",
     "TuesdayTwentyFirstWeek",
@@ -86,6 +99,27 @@ function RootLayout() {
     "ThursdayThirtiethWeek",
     "FridayThirtiethWeek",
     "SaturdayThirtiethWeek",
+    "SundayThirtyFirstWeek",
+    "MondayThirtyFirstWeek",
+    "TuesdayThirtyFirstWeek",
+    "WednesdayThirtyFirstWeek",
+    "ThursdayThirtyFirstWeek",
+    "FridayThirtyFirstWeek",
+    "SaturdayThirtyFirstWeek",
+    "SundayThirtySecondWeek",
+    "MondayThirtySecondWeek",
+    "TuesdayThirtySecondWeek",
+    "WednesdayThirtySecondWeek",
+    "ThursdayThirtySecondWeek",
+    "FridayThirtySecondWeek",
+    "SaturdayThirtySecondWeek",
+    "SundayThirtyThirdWeek",
+    "MondayThirtyThirdWeek",
+    "TuesdayThirtyThirdWeek",
+    "WednesdayThirtyThirdWeek",
+    "ThursdayThirtyThirdWeek",
+    "FridayThirtyThirdWeek",
+    "SaturdayThirtyThirdWeek",
   ];
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -138,7 +172,8 @@ function RootLayout() {
       feastDays[dayOfYear(selectedDate) - 1].startsWith("The") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")  ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("All")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("All") ||
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Feast")
     ) {
       setIsFeastDay(true);
     } else {
@@ -164,7 +199,7 @@ function RootLayout() {
           <div className="divLayout">
             <br/>
             <span className="date">
-              {feastDays[dayOfYear(selectedDate) - 1]}
+              {feastDays[dayOfYear(selectedDate) - 3]}
               <br />
               <br />
             </span>
@@ -198,8 +233,8 @@ function RootLayout() {
                     },
                   },
                 }}
-                minDate={dayjs("2023-10-10")}
-                maxDate={dayjs("2023-11-04")}
+                minDate={dayjs("2024-05-19")}
+                maxDate={dayjs("2024-05-22")}
               />
               <input
                 className="themeToggle"

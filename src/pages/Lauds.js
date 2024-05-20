@@ -60,7 +60,7 @@ const Lauds = () => {
       .then((response) => setLauds(response, ()=>{setIsFetchedLauds(true)}));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/DaysOfWeekPropers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/Lauds.json`
     )
       .then((response) => response.json())

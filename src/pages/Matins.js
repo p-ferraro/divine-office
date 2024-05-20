@@ -68,7 +68,7 @@ const Matins = () => {
       .then((response) => setMatins(response));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/DaysOfWeekPropers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/Matins.json`
     )
       .then((response) => response.json())

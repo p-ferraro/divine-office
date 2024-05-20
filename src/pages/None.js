@@ -51,7 +51,7 @@ const None = () => {
       .then((response) => setNone(response));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/Propers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/None.json`
     )
       .then((response) => response.json())

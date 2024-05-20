@@ -50,7 +50,7 @@ const Terce = () => {
       .then((response) => setTerce(response));
     fetch(
       `https://summorum-pontificum-default-rtdb.firebaseio.com/DivineOffice/Propers/${
-        propers[dayOfYear(selectedDate) - 239]
+        propers[dayOfYear(selectedDate) - 134]
       }/Terce.json`
     )
       .then((response) => response.json())
