@@ -29,6 +29,13 @@ function RootLayout() {
     "ThursdayEighthWeek",
     "FridayEighthWeek",
     "SaturdayEighthWeek",
+    "SundayNinthWeek",
+    "MondayNinthWeek",
+    "TuesdayNinthWeek",
+    "WednesdayNinthWeek",
+    "ThursdayNinthWeek",
+    "FridayNinthWeek",
+    "SaturdayNinthWeek",
     "SundayTwentyFirstWeek",
     "MondayTwentyFirstWeek",
     "TuesdayTwentyFirstWeek",
@@ -173,7 +180,8 @@ function RootLayout() {
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Triumph") ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("Our")  ||
       feastDays[dayOfYear(selectedDate) - 1].startsWith("All") ||
-      feastDays[dayOfYear(selectedDate) - 1].startsWith("Feast")
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Feast") ||
+      feastDays[dayOfYear(selectedDate) - 1].startsWith("Trinity")
     ) {
       setIsFeastDay(true);
     } else {
@@ -234,7 +242,7 @@ function RootLayout() {
                   },
                 }}
                 minDate={dayjs("2024-05-19")}
-                maxDate={dayjs("2024-05-24")}
+                maxDate={dayjs("2024-05-29")}
               />
               <input
                 className="themeToggle"
